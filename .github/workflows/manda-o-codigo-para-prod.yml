@@ -10,5 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+     - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: main
      - name: "Testando actions"
-       run: echo "Olá mundo!"
+       run: |
+        echo "Olá mundo!"
+        #script
+        git pull
+        git checkout deploy
+        ls -la
